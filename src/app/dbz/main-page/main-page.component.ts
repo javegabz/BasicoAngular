@@ -1,16 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Provider } from '@angular/core';
+
+interface iPersonaje {
+  nombre:string;
+  poder:number;
+
+
+}
 
 @Component({
   selector: 'app-main-page',
-  templateUrl: './main-page.component.html',
-  styleUrls: ['./main-page.component.css']
+  templateUrl: './main-page.component.html'
 })
 
-export class MainPageComponent implements OnInit {
+export class MainPageComponent  {
+/*
+  agregar(evento:any){
+    evento.preventDefault();
+    console.log("Hey!!!!");
+  }*/
+  nuevo:iPersonaje={
+    nombre:'Trunks',
+    poder: 7000,
+  }
 
-  constructor() { }
+  agregar(){
+    console.log(this.nuevo);
+  }  
 
-  ngOnInit(): void {
+  cambiarNombre( event:any)
+  {
+    console.log(event.target.value);
+    //console.log(event);
   }
 
 }
