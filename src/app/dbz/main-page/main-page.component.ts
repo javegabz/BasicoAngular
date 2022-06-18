@@ -19,8 +19,8 @@ export class MainPageComponent  {
     console.log("Hey!!!!");
   }*/
   nuevo:iPersonaje={
-    nombre:'Trunks',
-    poder: 7000,
+    nombre:'',
+    poder: 0,
   }
 
   agregar(){
