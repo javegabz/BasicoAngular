@@ -54,4 +54,9 @@ export class MainPageComponent  {
     //console.log(event);
   }
 
+
+  agregarNuevoPersonaje( argumento:iPersonaje){
+    this.personajes.push(argumento);
+  }
+
 }
