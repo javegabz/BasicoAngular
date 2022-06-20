@@ -1,9 +1,7 @@
 import { Component, OnInit, Provider } from '@angular/core';
+import { iPersonaje } from '../interfaces/dbz.interface';
 
-interface iPersonaje {
-  nombre:string;
-  poder:number;
-}
+
 
 @Component({
   selector: 'app-main-page',
@@ -17,10 +15,9 @@ export class MainPageComponent  {
     console.log("Hey!!!!");
   }*/
   nuevo:iPersonaje={
-    nombre:'',
-    poder: 0,
+    nombre:'Maestro Roshi',
+    poder: 20,
   }
-
   personajes: iPersonaje[] = [
     {
       nombre:'Gokú',
@@ -47,19 +44,9 @@ export class MainPageComponent  {
       poder: 1000000,
     },
   ];
-//anotacion
- 
-  agregar(){
-   // if (this.nuevo.nombre.trim().length!==0){
-      this.personajes.push(this.nuevo);
-      console.log(this.nuevo);
-  
-      this.nuevo= {
-        nombre:'',
-        poder: 0,
-      }
-   // }
-  }  
+
+
+
 
   cambiarNombre( event:any)
   {
