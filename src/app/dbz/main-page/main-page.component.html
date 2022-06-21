@@ -2,8 +2,8 @@
 <hr>
 <div class="row">
     
-    <div class="col" *ngIf="personajes.length!=0; else sinPeronajes">
-    <app-personajes [data]="personajes"></app-personajes>    
+    <div class="col">
+    <app-personajes ></app-personajes>    
     </div>
     
     <ng-template #sinPeronajes>
@@ -12,7 +12,6 @@
     <div class="col">
     <app-agregar 
         [nuevo]="nuevo"
-        (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"   
         ></app-agregar>    
     </div>
 
